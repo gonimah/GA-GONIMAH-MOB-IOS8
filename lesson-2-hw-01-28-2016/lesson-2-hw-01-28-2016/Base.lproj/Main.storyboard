@@ -17,14 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMM-4C-od2">
-                                <rect key="frame" x="248" y="142" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMM-4C-od2">
+                                <rect key="frame" x="238.5" y="287.5" width="123" height="25.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="0.10229285806417465" green="0.66951268911361694" blue="0.94814878702163696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98727109160000004" blue="0.60466008510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JMM-4C-od2" firstAttribute="centerX" secondItem="Hph-Hl-bnn" secondAttribute="centerX" id="CNh-be-8t4"/>
+                            <constraint firstItem="JMM-4C-od2" firstAttribute="centerY" secondItem="Hph-Hl-bnn" secondAttribute="centerY" id="dr9-sd-W8u"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnA-a2-CCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -43,15 +47,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-pW-OPu">
-                                <rect key="frame" x="132" y="184" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-pW-OPu">
+                                <rect key="frame" x="257.5" y="282.5" width="85" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Say Hello!">
+                                    <color key="titleColor" red="1" green="0.98727109160000004" blue="0.60466008510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="dVo-QX-Fkt" kind="show" id="ApJ-yX-Dkv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46323556389999998" green="0.77474315319999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zyq-pW-OPu" firstAttribute="centerX" secondItem="cGm-EY-nME" secondAttribute="centerX" id="1iZ-nJ-bPW"/>
+                            <constraint firstItem="zyq-pW-OPu" firstAttribute="centerY" secondItem="cGm-EY-nME" secondAttribute="centerY" id="w6w-ZV-2R4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DDi-cJ-fjU"/>
                 </viewController>
@@ -71,15 +82,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYc-b9-IGM">
-                                <rect key="frame" x="138" y="188" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYc-b9-IGM">
+                                <rect key="frame" x="183.5" y="283" width="233" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Press me for a random color!">
+                                    <color key="titleColor" red="0.82766891320000002" green="1" blue="0.87540363619999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeColor:" destination="3av-CV-dAR" eventType="touchUpInside" id="lqq-Ft-2Vx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91616057650000005" green="0.44596059500000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hYc-b9-IGM" firstAttribute="centerX" secondItem="jgi-aI-g9n" secondAttribute="centerX" id="JGH-5w-XYo"/>
+                            <constraint firstItem="hYc-b9-IGM" firstAttribute="centerY" secondItem="jgi-aI-g9n" secondAttribute="centerY" id="xx3-hd-9uu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xgf-BB-NSa"/>
                     <connections>
@@ -90,11 +108,11 @@
             </objects>
             <point key="canvasLocation" x="3692" y="401"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Pmo-ut-DcW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hLS-Vd-Plj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qDF-FZ-38w"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="qDF-FZ-38w"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ice-ao-tQr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -109,11 +127,11 @@
             </objects>
             <point key="canvasLocation" x="3720" y="-421"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="233-rC-A6b">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4G3-j6-mF9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="IrS-Fh-jBU"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="IrS-Fh-jBU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ub1-5e-G8m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

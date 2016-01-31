@@ -15,6 +15,7 @@
 		699227AE1C5D487C00FDFD3E /* lesson_2_hw_01_28_2016Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699227AD1C5D487C00FDFD3E /* lesson_2_hw_01_28_2016Tests.swift */; };
 		699227B91C5D487C00FDFD3E /* lesson_2_hw_01_28_2016UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699227B81C5D487C00FDFD3E /* lesson_2_hw_01_28_2016UITests.swift */; };
 		699227C71C5D93C800FDFD3E /* ColorChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699227C61C5D93C800FDFD3E /* ColorChangeViewController.swift */; };
+		699227C91C5DC92900FDFD3E /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 699227C81C5DC92800FDFD3E /* Icon-29.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		699227B81C5D487C00FDFD3E /* lesson_2_hw_01_28_2016UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lesson_2_hw_01_28_2016UITests.swift; sourceTree = "<group>"; };
 		699227BA1C5D487C00FDFD3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		699227C61C5D93C800FDFD3E /* ColorChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorChangeViewController.swift; sourceTree = "<group>"; };
+		699227C81C5DC92800FDFD3E /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		699227971C5D487C00FDFD3E /* lesson-2-hw-01-28-2016 */ = {
 			isa = PBXGroup;
 			children = (
+				699227C81C5DC92800FDFD3E /* Icon-29.png */,
 				699227981C5D487C00FDFD3E /* AppDelegate.swift */,
 				6992279A1C5D487C00FDFD3E /* ViewController.swift */,
 				6992279C1C5D487C00FDFD3E /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				699227A31C5D487C00FDFD3E /* LaunchScreen.storyboard in Resources */,
 				699227A01C5D487C00FDFD3E /* Assets.xcassets in Resources */,
 				6992279E1C5D487C00FDFD3E /* Main.storyboard in Resources */,
+				699227C91C5DC92900FDFD3E /* Icon-29.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
