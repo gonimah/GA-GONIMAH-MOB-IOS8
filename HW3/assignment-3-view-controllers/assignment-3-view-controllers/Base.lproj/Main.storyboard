@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController1" customModule="assignment_3_view_controllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rubber-duck.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-pa-c0A">
+                                <rect key="frame" x="123" y="74" width="367" height="275"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="367" id="JDS-2J-Zx3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-pl-jLP">
+                                <rect key="frame" x="219" y="477" width="162" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="78r-9c-eNg"/>
+                                    <constraint firstAttribute="width" constant="162" id="xLk-GL-JdH"/>
+                                </constraints>
+                                <state key="normal" title="Display Table View"/>
+                                <connections>
+                                    <segue destination="uWy-Ef-swF" kind="show" identifier="gotoTableView" id="7iC-5E-j1d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82766891320000002" green="1" blue="0.87540363619999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7Pe-pa-c0A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="6.5" id="2w9-t4-OD1"/>
+                            <constraint firstItem="7Pe-pa-c0A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="TtG-K4-O1c"/>
+                            <constraint firstItem="fgP-pl-jLP" firstAttribute="top" secondItem="7Pe-pa-c0A" secondAttribute="bottom" constant="128" id="pDW-Vb-9MH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Pe-pa-c0A" secondAttribute="bottom" constant="251" id="urt-4h-jIk"/>
+                            <constraint firstItem="fgP-pl-jLP" firstAttribute="centerX" secondItem="7Pe-pa-c0A" secondAttribute="centerX" constant="-6.5" id="xxK-GC-6Xf"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wgG-t2-cgG" appends="YES" id="QkB-ob-6sp"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="wgG-t2-cgG">
+                    <connections>
+                        <segue destination="xTo-sf-iMX" kind="presentation" id="0HY-08-UIs"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="223" y="254"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="zo2-0W-paa">
+            <objects>
+                <tableViewController id="uWy-Ef-swF" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Het-o9-qX2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="animals" textLabel="xC8-ZA-IqB" style="IBUITableViewCellStyleDefault" id="elb-EW-KWA">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elb-EW-KWA" id="XMV-xx-fVg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xC8-ZA-IqB">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uWy-Ef-swF" id="Ss4-rh-Nak"/>
+                            <outlet property="delegate" destination="uWy-Ef-swF" id="K6y-y6-kpr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMa-AA-qOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223" y="974"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="kgr-lz-Mng">
+            <objects>
+                <viewController id="xTo-sf-iMX" customClass="ViewController2" customModule="assignment_3_view_controllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oVc-mI-OZm"/>
+                        <viewControllerLayoutGuide type="bottom" id="tw3-XX-ME1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vos-HO-7mi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boga_Lake.png" translatesAutoresizingMaskIntoConstraints="NO" id="X4o-b2-guk">
+                                <rect key="frame" x="118" y="187" width="365" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="Ced-xd-ysq"/>
+                                    <constraint firstAttribute="width" constant="365" id="NzL-Eo-3mU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPG-1u-gj3">
+                                <rect key="frame" x="272" y="464" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissModal:" destination="xTo-sf-iMX" eventType="touchUpInside" id="8KS-yh-7ud"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82766891320000002" green="1" blue="0.87540363619999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X4o-b2-guk" firstAttribute="centerX" secondItem="vos-HO-7mi" secondAttribute="centerX" id="03O-zP-Bqq"/>
+                            <constraint firstItem="X4o-b2-guk" firstAttribute="centerY" secondItem="vos-HO-7mi" secondAttribute="centerY" id="AnL-Re-ewG"/>
+                            <constraint firstItem="tPG-1u-gj3" firstAttribute="top" secondItem="X4o-b2-guk" secondAttribute="bottom" constant="52" id="E0z-kY-9aV"/>
+                            <constraint firstItem="tPG-1u-gj3" firstAttribute="centerX" secondItem="X4o-b2-guk" secondAttribute="centerX" constant="-1.5" id="dWB-j7-a3Q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txR-34-w6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="252"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boga_Lake.png" width="680" height="510"/>
+        <image name="Rubber-duck.png" width="800" height="635"/>
+    </resources>
+</document>
