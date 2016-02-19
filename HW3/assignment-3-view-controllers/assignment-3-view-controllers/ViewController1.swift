@@ -11,6 +11,10 @@ import UIKit
 class ViewController1: UIViewController {
     var randomList: [String] = ["Eggs", "Milk"]
     
+    @IBAction func gotoTable(sender: AnyObject) {
+        performSegueWithIdentifier("gotoTableView", sender: self)
+    }
+    
     /*
     TODO one: Hook up a swipeable area on the home screen that must present a modal dialog when swiped. You must create the modal dialog and present it in CODE (not the storyboard).
     TODO two: Add an imageview to the modal dialog presented in TODO two.
@@ -28,12 +32,8 @@ class ViewController1: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "gotoTableView") {
-            let vc = segue.destinationViewController as! ArrayTableViewController
-        }
-    }
+   
+    
 
     
 

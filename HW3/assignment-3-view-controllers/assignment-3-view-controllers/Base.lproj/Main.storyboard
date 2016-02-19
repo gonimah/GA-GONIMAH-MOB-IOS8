@@ -32,7 +32,7 @@
                                 </constraints>
                                 <state key="normal" title="Display Table View"/>
                                 <connections>
-                                    <segue destination="uWy-Ef-swF" kind="show" identifier="gotoTableView" id="7iC-5E-j1d"/>
+                                    <action selector="gotoTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjq-zs-B5j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,6 +50,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="zvm-b9-szU"/>
+                    <connections>
+                        <segue destination="uWy-Ef-swF" kind="show" identifier="gotoTableView" id="2sn-fO-vBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="wgG-t2-cgG">
@@ -60,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1035" y="254"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Array Table View Controller-->
         <scene sceneID="zo2-0W-paa">
             <objects>
-                <tableViewController id="uWy-Ef-swF" sceneMemberID="viewController">
+                <tableViewController id="uWy-Ef-swF" customClass="ArrayTableViewController" customModule="assignment_3_view_controllers" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Het-o9-qX2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
