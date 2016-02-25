@@ -42,5 +42,31 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         listItems.dataSource = self
         listItems.delegate = self
+        keyInputTextField.becomeFirstResponder()
+        valueInputTextField.becomeFirstResponder()
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillShow:",
+            name: UIKeyboardWillShowNotification,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillHide:",
+            name: UIKeyboardWillHideNotification,
+            object: nil)
     }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        keyInputTextField.backgroundColor = UIColor.blueColor()
+        valueInputTextField.backgroundColor = UIColor.blueColor()
+
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        keyInputTextField.backgroundColor = UIColor.redColor()
+        valueInputTextField.backgroundColor = UIColor.redColor()
+    }
+    
 }

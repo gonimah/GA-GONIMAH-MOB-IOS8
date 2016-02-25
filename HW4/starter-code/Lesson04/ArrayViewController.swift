@@ -39,6 +39,27 @@ class ArrayViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         listItems.dataSource = self
         listItems.delegate = self
+        choresInputTextField.becomeFirstResponder() //todo is this working?
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillShow:",
+            name: UIKeyboardWillShowNotification,
+            object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "keyboardWillHide:",
+            name: UIKeyboardWillHideNotification,
+            object: nil)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        choresInputTextField.backgroundColor = UIColor.blueColor()
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        choresInputTextField.backgroundColor = UIColor.redColor()
     }
 }
 
