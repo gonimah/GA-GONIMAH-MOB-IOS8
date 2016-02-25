@@ -7,9 +7,7 @@ TODO four: Make this class a UITableViewDelegate and UITableViewDataSource that 
 TODO five: Make the background of the text boxes in this controller BLUE when the keyboard comes up, and RED when it goes down. Start with UIKeyboardWillShowNotification and NSNotificationCenter.
 */
 class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     var dataDictionary = [String: String]()
-    
     @IBOutlet weak var keyInputTextField: UITextField!
     @IBOutlet weak var valueInputTextField: UITextField!
     
@@ -26,7 +24,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let value = Array(dataDictionary.values)[indexPath.row]
         cell.textLabel?.text = key + " - " + value
         return cell
-    
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +58,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func keyboardWillShow(notification: NSNotification) {
         keyInputTextField.backgroundColor = UIColor.blueColor()
         valueInputTextField.backgroundColor = UIColor.blueColor()
-
     }
     
     func keyboardWillHide(notification: NSNotification) {

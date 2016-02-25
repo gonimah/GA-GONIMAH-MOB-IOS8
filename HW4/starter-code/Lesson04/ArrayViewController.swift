@@ -22,7 +22,6 @@ class ArrayViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCellWithIdentifier("choresItem", forIndexPath: indexPath)
         cell.textLabel?.text = choresListItems[indexPath.row]
         
-        //cell.accessoryType = .Checkmark // this will display a checkmark next to each item
         return cell
     }
     
