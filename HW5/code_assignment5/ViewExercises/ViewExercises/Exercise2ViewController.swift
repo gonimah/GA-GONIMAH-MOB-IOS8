@@ -8,6 +8,9 @@ class Exercise2ViewController: UIViewController {
         showTopRightCorner()
         showBottemLeftCorner()
         showBottomRightCorner()
+        
+        edgesForExtendedLayout = .None
+        navigationController?.navigationBar.translucent = false
     }
     
     func showTopLeftCorner() {
@@ -20,7 +23,7 @@ class Exercise2ViewController: UIViewController {
         view.addConstraint(horizontalConstraint)
         
         // TODO fix me; make me relative to the nav bar
-        let verticalConstraint = NSLayoutConstraint(item: topLeftCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 65)
+        let verticalConstraint = NSLayoutConstraint(item: topLeftCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
         view.addConstraint(verticalConstraint)
         
         let widthConstraint = NSLayoutConstraint(item: topLeftCorner, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 20)
@@ -40,7 +43,7 @@ class Exercise2ViewController: UIViewController {
         view.addConstraint(horizontalConstraint)
         
         // TODO fix me; make me relative to the nav bar
-        let verticalConstraint = NSLayoutConstraint(item: topRightCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 65)
+        let verticalConstraint = NSLayoutConstraint(item: topRightCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
         view.addConstraint(verticalConstraint)
         
         let widthConstraint = NSLayoutConstraint(item: topRightCorner, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 20)
