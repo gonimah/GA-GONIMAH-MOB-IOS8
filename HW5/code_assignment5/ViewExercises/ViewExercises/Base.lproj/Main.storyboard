@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Exercise 1-->
@@ -116,13 +117,51 @@
                     <view key="view" contentMode="scaleToFill" id="zb1-4e-cit">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NsQ-pz-36A">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="NZM-ru-N5G">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZM-ru-N5G" id="OSq-s8-77n">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enH-ac-fUR">
+                                                    <rect key="frame" x="279" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="enH-ac-fUR" firstAttribute="centerY" secondItem="OSq-s8-77n" secondAttribute="centerY" id="Pcf-Ak-z0f"/>
+                                                <constraint firstItem="enH-ac-fUR" firstAttribute="centerX" secondItem="OSq-s8-77n" secondAttribute="centerX" id="Vqo-KX-PmS"/>
+                                                <constraint firstItem="enH-ac-fUR" firstAttribute="top" secondItem="OSq-s8-77n" secondAttribute="topMargin" constant="3" id="huG-Yi-Gsq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kRf-HH-lAp" id="NP0-er-LpS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NsQ-pz-36A" secondAttribute="trailing" id="7Vg-uq-gW0"/>
+                            <constraint firstItem="NsQ-pz-36A" firstAttribute="leading" secondItem="zb1-4e-cit" secondAttribute="leading" id="NFZ-j0-6da"/>
+                            <constraint firstItem="NsQ-pz-36A" firstAttribute="top" secondItem="OIQ-Ff-Pne" secondAttribute="bottom" id="Nxn-4D-vCR"/>
+                            <constraint firstItem="NsQ-pz-36A" firstAttribute="bottom" secondItem="KTh-E2-xBW" secondAttribute="top" id="yr0-sT-ch7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise 5" id="J2d-VF-0Rx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ha-0C-hQs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4190" y="1122"/>
+            <point key="canvasLocation" x="4238" y="1122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XY2-oL-4Na">

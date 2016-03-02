@@ -1,7 +1,6 @@
 import UIKit
 
 class Exercise2ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         showTopLeftCorner()
@@ -22,7 +21,6 @@ class Exercise2ViewController: UIViewController {
         let horizontalConstraint = NSLayoutConstraint(item: topLeftCorner, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
-        // TODO fix me; make me relative to the nav bar
         let verticalConstraint = NSLayoutConstraint(item: topLeftCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
         view.addConstraint(verticalConstraint)
         
@@ -42,7 +40,6 @@ class Exercise2ViewController: UIViewController {
         let horizontalConstraint = NSLayoutConstraint(item: topRightCorner, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Trailing, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
-        // TODO fix me; make me relative to the nav bar
         let verticalConstraint = NSLayoutConstraint(item: topRightCorner, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
         view.addConstraint(verticalConstraint)
         

@@ -1,7 +1,6 @@
 import UIKit
 
 class Exercise1ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         showRedView()
@@ -20,7 +19,6 @@ class Exercise1ViewController: UIViewController {
         let horizontalConstraint = NSLayoutConstraint(item: redView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
-        // TODO - FIX ME !! how do get the position of the nav bar so that i can make the red view leading = nav bar bottom?
         let verticalConstraint = NSLayoutConstraint(item: redView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
         view.addConstraint(verticalConstraint)
         

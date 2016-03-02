@@ -41,5 +41,4 @@ class Exercise4ViewController: UIViewController {
             sender.backgroundColor = UIColor.greenColor()
         }
     }
-
 }
