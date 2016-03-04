@@ -1,7 +1,6 @@
 import UIKit
 
 class Exercise4ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         loadButton()
@@ -16,7 +15,6 @@ class Exercise4ViewController: UIViewController {
         button.layer.borderColor = UIColor.redColor().CGColor
         button.layer.borderWidth = CGFloat(1)
         button.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(button)

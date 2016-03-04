@@ -72,33 +72,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-i6-gWu">
-                                        <rect key="frame" x="0.0" y="0.0" width="604" height="1060"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1060"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1060" id="UxL-ZY-xii"/>
+                                            <constraint firstAttribute="height" constant="1060" id="w3N-0x-GOk"/>
                                             <constraint firstAttribute="width" constant="604" id="zIU-kI-bgh"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="zIU-kI-bgh"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="QoO-i6-gWu" firstAttribute="centerX" secondItem="X0W-ds-Ode" secondAttribute="centerX" id="AOT-jI-q4j"/>
-                                    <constraint firstItem="QoO-i6-gWu" firstAttribute="top" secondItem="X0W-ds-Ode" secondAttribute="top" id="RaN-s6-jim"/>
+                                    <constraint firstAttribute="trailing" secondItem="QoO-i6-gWu" secondAttribute="trailing" id="CfV-5z-WBw"/>
+                                    <constraint firstAttribute="bottom" secondItem="QoO-i6-gWu" secondAttribute="bottom" id="Ck9-YI-Z4n"/>
+                                    <constraint firstItem="QoO-i6-gWu" firstAttribute="leading" secondItem="X0W-ds-Ode" secondAttribute="leading" id="SDe-vq-PmS"/>
+                                    <constraint firstItem="QoO-i6-gWu" firstAttribute="top" secondItem="X0W-ds-Ode" secondAttribute="top" id="cbP-8R-9BQ"/>
+                                    <constraint firstItem="QoO-i6-gWu" firstAttribute="centerX" secondItem="X0W-ds-Ode" secondAttribute="centerX" id="kao-SH-Eak"/>
                                     <constraint firstAttribute="bottom" secondItem="QoO-i6-gWu" secondAttribute="bottom" id="lVP-0u-Pil"/>
-                                    <constraint firstAttribute="trailing" secondItem="QoO-i6-gWu" secondAttribute="trailing" id="n8D-ow-ynH"/>
-                                    <constraint firstItem="QoO-i6-gWu" firstAttribute="leading" secondItem="X0W-ds-Ode" secondAttribute="leading" id="zhv-RG-oFd"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="AOT-jI-q4j"/>
+                                        <exclude reference="lVP-0u-Pil"/>
                                     </mask>
                                 </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="X0W-ds-Ode" secondAttribute="trailing" id="GRq-qk-qbe"/>
-                            <constraint firstItem="X0W-ds-Ode" firstAttribute="top" secondItem="WKO-sW-VH4" secondAttribute="top" id="S6L-NO-0fF"/>
-                            <constraint firstItem="X0W-ds-Ode" firstAttribute="bottom" secondItem="zno-Cj-xp0" secondAttribute="top" id="V9L-c4-4dR"/>
-                            <constraint firstItem="X0W-ds-Ode" firstAttribute="leading" secondItem="WKO-sW-VH4" secondAttribute="leading" id="vbA-99-rkA"/>
+                            <constraint firstItem="X0W-ds-Ode" firstAttribute="top" secondItem="WKO-sW-VH4" secondAttribute="top" id="LGj-zO-oIn"/>
+                            <constraint firstItem="X0W-ds-Ode" firstAttribute="leading" secondItem="WKO-sW-VH4" secondAttribute="leading" id="Sf6-Ot-Wtq"/>
+                            <constraint firstItem="X0W-ds-Ode" firstAttribute="bottom" secondItem="zno-Cj-xp0" secondAttribute="top" id="ZpW-ZB-5tC"/>
+                            <constraint firstAttribute="trailing" secondItem="X0W-ds-Ode" secondAttribute="trailing" id="c4Z-Sz-aq7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise 3" id="t5n-Px-SCN">

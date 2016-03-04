@@ -5,8 +5,8 @@ class Exercise1ViewController: UIViewController {
         super.viewDidLoad()
         showRedView()
         showBlackView()
-        edgesForExtendedLayout = .None
-        navigationController?.navigationBar.translucent = false
+        //edgesForExtendedLayout = .None
+        navigationController?.navigationBar.translucent = false    
     }
     
     func showRedView() {

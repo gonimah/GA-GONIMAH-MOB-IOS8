@@ -11,7 +11,7 @@ class Exercise3ViewController: UIViewController {
         super.viewDidLoad()
         showBlueView()
         showPurpleView()
-        //add a white label on the purple view
+        showWhiteLabel()
         showRedView()
     }
     
@@ -23,7 +23,7 @@ class Exercise3ViewController: UIViewController {
         let horizontalConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: backgroundView, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: 0)
         backgroundView.addConstraint(horizontalConstraint)
         
-        let verticalConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: backgroundView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0)
+        let verticalConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: backgroundView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 10)
         backgroundView.addConstraint(verticalConstraint)
         
         let widthConstraint = NSLayoutConstraint(item: blueView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: backgroundView, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0)
@@ -68,5 +68,14 @@ class Exercise3ViewController: UIViewController {
         let heightConstraint = NSLayoutConstraint(item: redView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: 10)
         backgroundView.addConstraint(heightConstraint)
         
+    }
+    
+    func showWhiteLabel() {
+        let label = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        label.center = CGPointMake(160, 284)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Hello, World!"
+        label.textColor = UIColor.whiteColor()
+        backgroundView.addSubview(label)
     }
 }

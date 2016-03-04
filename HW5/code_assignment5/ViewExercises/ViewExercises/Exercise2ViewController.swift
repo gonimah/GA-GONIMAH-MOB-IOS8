@@ -8,7 +8,7 @@ class Exercise2ViewController: UIViewController {
         showBottemLeftCorner()
         showBottomRightCorner()
         
-        edgesForExtendedLayout = .None
+        //edgesForExtendedLayout = .None
         navigationController?.navigationBar.translucent = false
     }
     
