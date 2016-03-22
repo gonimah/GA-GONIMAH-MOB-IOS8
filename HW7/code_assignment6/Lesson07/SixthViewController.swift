@@ -9,27 +9,25 @@
 import UIKit
 
 class SixthViewController: UIViewController {
-
+    @IBOutlet weak var outputDisplayView: UITextView!
+    var data : [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // todo read the saved Array from the property list file, join its elements by single spaces into a single String, then display that String in the text view
+        
+        let arrayToRead = NSArray(contentsOfURL: getUrlForDocument("data.plist"))
+        
+        self.data = arrayToRead as! [String]
+        let stringRepresentation = data.joinWithSeparator(" ")
+        outputDisplayView.text = stringRepresentation
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getUrlForDocument(documentName: String) -> NSURL{
+        let fileMgr = NSFileManager.defaultManager()
+        let urls = fileMgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let directory = urls.first!
+        return directory.URLByAppendingPathComponent(documentName, isDirectory: false)
     }
-    */
-
 }

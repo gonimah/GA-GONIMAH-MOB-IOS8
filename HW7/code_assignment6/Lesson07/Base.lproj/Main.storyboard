@@ -151,10 +151,13 @@
                     <navigationItem key="navigationItem" id="W4c-fq-GLh">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="HyF-Nz-TRS">
                             <connections>
-                                <segue destination="K7i-wr-zMx" kind="show" id="Kqp-TL-a7t"/>
+                                <segue destination="K7i-wr-zMx" kind="show" identifier="showFourthViewController" id="Kqp-TL-a7t"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inputTextView" destination="zba-PB-Qsj" id="Mdw-20-jKx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JI4-wm-MiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,6 +197,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="displayTextView" destination="IYJ-9d-N0H" id="kaZ-Ud-VkY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ja3-tn-t9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,10 +235,13 @@
                     <navigationItem key="navigationItem" id="J8l-kX-36I">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="fdX-3q-7No">
                             <connections>
-                                <segue destination="EJr-qo-djs" kind="show" id="5Ve-5X-T0O"/>
+                                <segue destination="EJr-qo-djs" kind="show" identifier="showSixthViewController" id="5Ve-5X-T0O"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="inputTextField" destination="g8w-4f-fdC" id="Mno-V7-i8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuk-gs-OMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,6 +276,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VhL-wN-QMX"/>
+                    <connections>
+                        <outlet property="outputDisplayView" destination="xxT-Lm-hNR" id="i2W-xU-ykz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNf-fV-B2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

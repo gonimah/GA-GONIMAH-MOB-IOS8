@@ -1,35 +1,22 @@
-//
-//  FourthViewController.swift
-//  Lesson07
-//
-//  Created by William Martin on 1/19/16.
-//  Copyright © 2016 General Assembly. All rights reserved.
-//
-
 import UIKit
 
 class FourthViewController: UIViewController {
-
+    @IBOutlet weak var displayTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        do {
+            let output = try String(contentsOfURL: getUrlForDocument("vc3_contents.txt"))
+            displayTextView.text = output
+        } catch {
+            print("problem reading content from vc3_contents.txt")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getUrlForDocument(documentName: String) -> NSURL{
+        let fileMgr = NSFileManager.defaultManager()
+        let urls = fileMgr.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let directory = urls.first!
+        return directory.URLByAppendingPathComponent(documentName, isDirectory: false)
     }
-    */
-
 }
