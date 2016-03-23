@@ -1,11 +1,3 @@
-//
-//  SixthViewController.swift
-//  Lesson07
-//
-//  Created by William Martin on 1/19/16.
-//  Copyright © 2016 General Assembly. All rights reserved.
-//
-
 import UIKit
 
 class SixthViewController: UIViewController {
@@ -15,8 +7,6 @@ class SixthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // todo read the saved Array from the property list file, join its elements by single spaces into a single String, then display that String in the text view
-        
         let arrayToRead = NSArray(contentsOfURL: getUrlForDocument("data.plist"))
         
         self.data = arrayToRead as! [String]

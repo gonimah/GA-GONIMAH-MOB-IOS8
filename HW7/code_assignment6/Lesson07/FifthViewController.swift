@@ -1,11 +1,3 @@
-//
-//  FIfthViewController.swift
-//  Lesson07
-//
-//  Created by William Martin on 1/19/16.
-//  Copyright © 2016 General Assembly. All rights reserved.
-//
-
 import UIKit
 
 class FifthViewController: UIViewController {
