@@ -1,6 +1,7 @@
 import XCPlayground
 import Foundation
 
+
 // To include SwiftyJSON, download SwiftyJSON.swift from the repository at 
 //   https://github.com/SwiftyJSON/SwiftyJSON/tree/master/Source
 // Then expand the Navigator with CMD+1.
@@ -22,8 +23,8 @@ if let url = NSURL(string: "https://google.com") {
             print("done with status code: \(response.statusCode)!")
         }
         if let data = data {
-            print("in this block, data is not nil")
-            let responseData = String(data: data, encoding: NSUTF8StringEncoding) // todo check why it's nil
+            print(data)
+            let responseData = String(data: data, encoding: NSASCIIStringEncoding)
             print(responseData)
         } else {
             print("could not get data back")
@@ -48,12 +49,8 @@ if let url = NSURL(string: gaUrl) {
             print(response.statusCode)
         }
         if let data = data {
-            do {
-                let responseData = String(data: data, encoding: NSUTF8StringEncoding)
-                print(responseData)
-            } catch {
-                print("invalid json")
-            }
+            let responseData = String(data: data, encoding: NSUTF8StringEncoding)
+            print(responseData)
         } else {
             print("could not get data back")
         }
@@ -84,6 +81,7 @@ class Weather {
     }
     
 }
+
 let city = "NewYork,NY"
 let weatherURL = "http://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=abf8ee9c8ddb8123f579247987b94d8f"
 
@@ -121,4 +119,33 @@ if let url = NSURL(string: weatherURL) {
 }
 
 //TODO four: Make a successful network connection to http://api.openweathermap.org/data/2.5/weather?q=New%20York,US, an API that speaks JSON. Populate a your above-defined model with the contents of that JSON using SwiftyJSON, then print out the model.
+
+if let url = NSURL(string: weatherURL) {
+    let urlSession = NSURLSession.sharedSession()
+    let task = urlSession.dataTaskWithURL(url) { (data, response, error) -> Void in
+        if let error = error {
+            print("error: \(error.localizedDescription)")
+        }
+        if let response = response as? NSHTTPURLResponse {
+            print(response.statusCode)
+        }
+        if let data = data {
+                let json = JSON(data: data)
+                let temp = json["main"]["temp"].float
+                let humidity = json["main"]["humidity"].float
+                let wind = json["wind"]
+                let windSpeed = json["wind"]["speed"].float
+                
+                if let temp = temp, humidity = humidity, windSpeed = windSpeed {
+                    let weather = Weather(temp: temp, city: city, humidity: humidity, wind: windSpeed)
+                    print(weather.description!)
+                }
+        } else {
+            print("could not get data back")
+        }
+    }
+    task.resume()
+} else {
+    print("not a valid url")
+}
 
